@@ -30,5 +30,9 @@ y_pred = model.predict(x_test)
 acc = accuracy_score( y_test, y_pred)
 class_report = classification_report( y_test, y_pred)
 
-print(f"Accuracy of the model is {acc}")
-print(f"Classification report ::\n {class_report}")
+# print(f"Accuracy of the model is {acc}")
+# print(f"Classification report ::\n {class_report}")
+
+new_sample = np.array([1.0, 1.5, 0.6, 3.2]).reshape(1, -1)
+ans = model.predict(new_sample)
+print(f"Prediction for the new sample: {ans}")
